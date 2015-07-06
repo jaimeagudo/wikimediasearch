@@ -1,0 +1,4 @@
+request = function()
+ path = "/search?q=Kosmos"
+ return wrk.format("GET", path)
+end
