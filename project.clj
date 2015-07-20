@@ -1,7 +1,16 @@
-(defproject wikimediasearch "0.0.1-SNAPSHOT"
-  :description "A sample project to show Clojure skills"
+(defproject wikimediasearch "0.0.2-SNAPSHOT"
+  :description "A sample project to show Clojure skills and benchmark Liberator performance"
   :url "https://github.com/jaimeagudo/wikimediasearch"
-  :jvm-opts ["-Xms3G" "-Xmx3G"]
+  :jvm-opts ^:replace  ["-Xms3G"
+                        "-Xmx3G"
+                        "-XX:+AggressiveOpts"
+                        "-XX:+UseCompressedOops"
+                        "-XX:+UnlockDiagnosticVMOptions"
+                        "-XX:+DebugNonSafepoints"
+                        "-XX:+UnlockCommercialFeatures"
+                        "-XX:+FlightRecorder"
+                        "-XX:StartFlightRecording=delay=60s,duration=60s,filename=wiki_flight_record.jfr"
+                        ]
   :main wikimediasearch.core
   :dependencies [[org.clojure/clojure "1.5.1"]
                  [compojure "1.3.4" :exclusions [org.clojure/tools.macro]]

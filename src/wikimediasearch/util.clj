@@ -1,6 +1,7 @@
 (ns wikimediasearch.util
   (:require
    [taoensso.timbre :as log :refer (trace debug info warn error report)]
+   [clojure.string :as string]
    [clojure.pprint :as pprint]
    ))
 
@@ -31,6 +32,19 @@
                  (:name (meta res#))
                  ": " (/ (double (- (. System (nanoTime)) start#)) 1000000.0) " msecs"))
        return#)))
+
+
+
+(defn usage [name options-summary]
+  (->> [name
+        " index REST API."
+        ""
+        (str "Usage: " name " [options]. All the options are optional and take default values")
+        ""
+        "Options:"
+        options-summary]
+       (string/join \newline)))
+
 
 (defn exit
   "Do house-keeping upon exit"
