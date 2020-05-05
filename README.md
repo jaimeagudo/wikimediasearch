@@ -1,6 +1,6 @@
 # Wikimedia search
 
-A sample project to show some Clojure skills and have a grasp about the Liberator performance dealing with a high volume of concurrent requets. 
+A sample project to show some Clojure skills and have a grasp about the Liberator performance dealing with a high volume of concurrent requets. For performance comparison purposes with an Scala implementation you might check out https://github.com/jaimeagudo/wikimediasearch
 
 # Challenge
 Wikimedia publish article abstracts as XML at [http://dumps.wikimedia.org/enwiki](http://dumps.wikimedia.org/enwiki) The files are very large but there is a smaller one (83Mb) at [latest](http://dumps.wikimedia.org/enwiki/latest/enwiki-latest-abstract23.xml) you can use for the test.
@@ -14,7 +14,7 @@ Each file contains a number of abstracts structured as per the following example
 	<doc>
 		<title>Wikipedia: IFK Holmsund</title>
 		<url>http://en.wikipedia.org/wiki/IFK_Holmsund</url>
-		<abstract>Idrottsföreningen Kamraterna Holmsund was a Swedish football team from Holmsund, Västerbotten County founded in 1923 http://www.bolletinen.</abstract>
+		<abstract>Idrottsföreningen Kamraterna Holmsund was a Swedish football team from Holmsund, Västerbotten County founded in 1923 http://www.bolletinen.</abstract>
 		￼￼￼￼<links>
 			<sublink linktype="nav"><anchor>Notable players</anchor>
 				<link>http://en.wikipedia.org/wiki/IFK_Holmsund#Notable_players</link></sublink>
