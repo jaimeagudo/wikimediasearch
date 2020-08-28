@@ -1,6 +1,6 @@
 # Wikimedia search
 
-A sample project to show some Clojure skills and have a grasp about the Liberator performance dealing with a high volume of concurrent requets. For performance comparison purposes with an Scala implementation you might check out https://github.com/jaimeagudo/wikimediasearch
+A sample project to show some Clojure skills and have a grasp about the Liberator performance dealing with a high volume of concurrent requets. For performance comparison purposes with an Scala implementation you might check out https://github.com/jaimeagudo/wikimediasearch-scala
 
 # Challenge
 Wikimedia publish article abstracts as XML at [http://dumps.wikimedia.org/enwiki](http://dumps.wikimedia.org/enwiki) The files are very large but there is a smaller one (83Mb) at [latest](http://dumps.wikimedia.org/enwiki/latest/enwiki-latest-abstract23.xml) you can use for the test.
